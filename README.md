@@ -20,8 +20,9 @@ This project analyzes product sales and revenue data to gain insights into sales
 
 ## SQL ANALYSIS
 
+-- selecting all the data on the table
 ```sql
-   SELECT  *  FROM   dbo.sales_data;  -- selecting all the data on the table
+   SELECT  *  FROM   dbo.sales_data; 
 ```
 
 
