@@ -4,7 +4,7 @@
 
 This project analyzes product sales and revenue data to gain insights into sales trends, product performance, and category-wise revenue distribution.
 
-# Data
+## Data
 
 **Date:** Date of sale.
 
@@ -18,9 +18,9 @@ This project analyzes product sales and revenue data to gain insights into sales
 
 **Revenue:** Revenue generated from the sale of the product.
 
-# SQL ANALYSIS
+## SQL ANALYSIS
 
-``sql
+``
    SELECT  *  FROM   dbo.sales_data;
 ``
 
