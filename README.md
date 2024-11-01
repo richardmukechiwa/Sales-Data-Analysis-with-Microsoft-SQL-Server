@@ -158,7 +158,7 @@ GROUP BY    daily,
             revenue,
             total_previous_day;
 ```
-####[6](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%206%20sql.png)
+![6](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%206%20sql.png)
 
 #### 7. Best Performing Category by Units Sold
 ```sql
