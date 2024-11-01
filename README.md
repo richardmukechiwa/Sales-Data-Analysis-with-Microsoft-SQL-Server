@@ -36,6 +36,8 @@ GROUP BY product_id,
          product_name
 ORDER BY Total_Revenue DESC;
 ```
+#### Outcome
+![1](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/q1%20sql.png)
 
 #### 2. Determine the Product with the Most Units Sold
 ```sql
