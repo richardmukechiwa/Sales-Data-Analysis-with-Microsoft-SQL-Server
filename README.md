@@ -49,6 +49,8 @@ GROUP BY  product_id,
           product_name
 ORDER BY  most_units_sold DESC;
 ```
+#### Outcome
+![2](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/q2%20sql.png)
 
 #### 3. Identify Top-Selling Product by Revenue for Each Day
 ```sql
@@ -78,7 +80,8 @@ GROUP BY  day,
 		  top_selling
 HAVING    top_selling = 1;
 ```
-
+#### Outcome
+![3](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/q3%20sql.png)
 #### 4. Percentage Contribution of Each Product to the Total Revenue
 ```sql
 WITH       CTE_Revenue AS 
@@ -110,6 +113,8 @@ SELECT     product_id,
 FROM       CTE_Revenue
 CROSS JOIN CTE_Tot_rev;
 ```
+#### Outcome
+![4](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/q4%20sql.png)
 
 #### 5 Identify Low-Performing Products (Revenue Below Average)
 ```sql
@@ -121,7 +126,9 @@ GROUP BY   product_id,
            product_name,
 		   revenue
 HAVING     SUM(revenue) < (SELECT  AVG(revenue) FROM  dbo.sales_data);
-```		   
+```
+#### Outcome
+![5](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qsn%205%20sql.png)
 
 #### 6. Track Sales Growth (Day-over-Day)
 ```sql
@@ -151,6 +158,8 @@ GROUP BY    daily,
             revenue,
             total_previous_day;
 ```
+####[6](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%206%20sql.png)
+
 #### 7. Best Performing Category by Units Sold
 ```sql
 SELECT      category,
@@ -158,6 +167,10 @@ SELECT      category,
 FROM        dbo.sales_data
 GROUP BY    category;
 ```
+
+#### Outcome
+![7](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%207%20sql.png)
+
 #### 8. Calculate the Average Revenue per Unit for Each Product
 ```sql
 SELECT      product_id,
@@ -169,6 +182,8 @@ FROM        dbo.sales_data
 GROUP BY    product_id,
             product_name;
 ```
+#### Outcome
+![8](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%208%20sql.png)
 
 #### 9. Highest Revenue-Generating Day
 ```sql
@@ -181,6 +196,9 @@ GROUP BY    date,
 ORDER BY    revenue_day DESC;
 
 ```
+#### Outcome
+![9](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%209%20sql.png)
+
 #### 10. Top 3 Products by Revenue in the Electronics Category
 ```sql
 SELECT      TOP 3 
@@ -195,6 +213,9 @@ GROUP BY    product_id,
 HAVING      category LIKE 'Electronics'
 ORDER BY    total_revenue DESC;
 ```
+#### Outcome
+![10](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%2010%20sql.png)
+
 ####  11  Compare the average revenue generated per unit sold for the two categories: Clothing and Electronics.
 ```sql
 SELECT       category,
@@ -204,6 +225,8 @@ SELECT       category,
 FROM         dbo.sales_data
 GROUP BY     category;
 ```
+![11](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%2011%20sql.png)
+
 #### 12. Identify Sales Drop in Clothing Category
 ```sql
 WITH         CTE_Sales_drop AS
@@ -235,8 +258,11 @@ SELECT       date,
 FROM         CTE_Sales_drop
 GROUP BY     revenue,
              units_sold,
-			 date;
+             date;
 ```
+#### Outcome
+![12](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%2012%20sql.png)
+
 #### 13. Cumulative Revenue for Each Product by Day
 ```sql
 SELECT        date,
@@ -248,8 +274,10 @@ FROM          dbo.sales_data
 GROUP BY       date,
               product_id,
               product_name,
-			  revenue;
+              revenue;
 ```
+#### Outcome
+![13](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/qstn%2013%20sql.png)
 			 
              
 
