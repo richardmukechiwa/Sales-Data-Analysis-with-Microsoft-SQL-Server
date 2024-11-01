@@ -105,13 +105,13 @@ WITH       CTE_Revenue AS
 				FROM     dbo.sales_data
 				
             )
-SELECT     product_id,
-           product_name,
-		   revenue,
-		   total_rev,
-         (revenue * 100.00)/total_rev AS '% Contribution'
-FROM       CTE_Revenue
-CROSS JOIN CTE_Tot_rev;
+                               SELECT    product_id,
+                                         product_name,
+		                         revenue,
+		                         total_rev,
+                                         (revenue * 100.00)/total_rev AS '% Contribution'
+                              FROM       CTE_Revenue
+                              CROSS JOIN CTE_Tot_rev;
 ```
 #### Outcome
 ![4](https://github.com/richardmukechiwa/Sales-Data-Analysis-with-Microsoft-SQL-Server/blob/main/q4%20sql.png)
